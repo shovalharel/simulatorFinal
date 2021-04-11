@@ -1,0 +1,118 @@
+﻿<!---<UserControl x:Class="simulator.Graphs"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:oxy="http://oxyplot.org/wpf"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:simulator"
+             mc:Ignorable="d" d:DesignWidth="800" Height="512">
+    <Grid Margin="0,0,0,-64">
+        <DockPanel x:Name="dock" Width="400" Height="400" Margin="116,124,284,52" Background="Red">
+            <DockPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.288"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </DockPanel.RenderTransform>
+        </DockPanel>
+        <Button x:Name="Open_dll" Content="Open dll" Width="150" Click="Open_dll_Click" FontWeight="Bold" FontSize="20" Canvas.Left="340" Canvas.Top="55" Margin="188,68,462,478" Background="SpringGreen">
+
+        </Button>
+        <ListBox x:Name="Listbox_chunks_list" ItemsSource="{Binding VM_Chunks_list}" SelectedIndex="0" 
+                 HorizontalAlignment="Left" Height="58" Margin="513,68,0,0" VerticalAlignment="Top" 
+                 Width="130" SelectionChanged="Listbox_chunks_list_SelectionChanged">
+        </ListBox>
+        <oxy:Plot x:Name="chunk_select" Title="{Binding VM_Chunk_selected}" Margin="407,0,311,518"  FontSize="5">
+            <oxy:Plot.Series>
+                <oxy:LineSeries ItemsSource="{Binding VM_Points}"/>
+            </oxy:Plot.Series>
+        </oxy:Plot>
+
+        <oxy:Plot x:Name="max_pearson" Title="{Binding VM_Pearson_chunk}" Margin="343,40,391,474"  FontSize="5">
+            <oxy:Plot.Series>
+                <oxy:LineSeries ItemsSource="{Binding VM_Pearson_points}"/>
+            </oxy:Plot.Series>
+        </oxy:Plot>
+
+        
+        <oxy:Plot x:Name="max_pearson_chunk" Title="BANANA" Margin="66,0,617,484"  FontSize="5">
+            <oxy:Plot.Series>
+                <oxy:LineSeries ItemsSource="{Binding VM_Line_Points}"/>
+                <oxy:LineSeries ItemsSource="{Binding VM_Last_Points}" Color="Transparent" MarkerFill="Plum" MarkerType="Circle" MarkerSize="3"/>
+            </oxy:Plot.Series>
+        </oxy:Plot>
+
+    </Grid>
+</UserControl>-->
+
+<UserControl x:Class="simulator.Graphs"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:oxy="http://oxyplot.org/wpf"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:simulator"
+             mc:Ignorable="d" 
+             d:DesignHeight="310" d:DesignWidth="450" FontWeight="Bold" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.2*"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="1.1*"/>
+            <RowDefinition Height="0.4*"/>
+
+
+        </Grid.RowDefinitions>
+        <DockPanel x:Name="dock" Grid.Row="2" Margin="0,0,50,0" Grid.Column="0" Width="auto" Background="Transparent">
+            <DockPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.288"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </DockPanel.RenderTransform>
+        </DockPanel>
+        <ListBox x:Name="Listbox_chunks_list" ItemsSource="{Binding VM_Chunks_list}" SelectedIndex="0" 
+                Grid.Column="0" Grid.Row="0"  VerticalAlignment="Center" HorizontalAlignment="Center" 
+                Height="92" Width="156" SelectionChanged="Listbox_chunks_list_SelectionChanged" FontWeight="Bold">
+        </ListBox>
+        <oxy:Plot x:Name="chunk_select" Title="{Binding VM_Chunk_selected}" FontSize="5" Grid.Column="2" Grid.Row="0" Background="Transparent" FontWeight="Bold">
+
+            <oxy:Plot.Series>
+                <oxy:LineSeries ItemsSource="{Binding VM_Points}"/>
+            </oxy:Plot.Series>
+        </oxy:Plot>
+
+        <oxy:Plot x:Name="max_pearson" Title="{Binding VM_Pearson_chunk}" Grid.Column="4" Grid.Row="0" FontSize="5" Background="Transparent" FontWeight="Bold">
+            <oxy:Plot.Series >
+                <oxy:LineSeries ItemsSource="{Binding VM_Pearson_points}" />
+            </oxy:Plot.Series>
+        </oxy:Plot>
+
+        <!--points-->
+        <oxy:Plot x:Name="max_pearson_chunk" Title="BANANA"  Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="2" FontSize="5" Background="Transparent" FontWeight="Bold">
+            <oxy:Plot.Series>
+                <oxy:LineSeries ItemsSource="{Binding VM_Line_Points}" />
+                <oxy:LineSeries ItemsSource="{Binding VM_Last_Points}" Color="Transparent" MarkerFill="Plum" MarkerType="Circle" MarkerSize="3" />
+            </oxy:Plot.Series>
+            <oxy:Plot.Axes>
+                <oxy:LinearColorAxis AxislineColor="Transparent" HighColor="Red" LowColor="Green"></oxy:LinearColorAxis>
+                <oxy:LinearAxis AxislineColor="Transparent" TextColor="Blue" />
+            </oxy:Plot.Axes>
+
+        </oxy:Plot>
+        <Button x:Name="Open_dll" Content="Open dll" Click="Open_dll_Click"  Grid.Row="3" Grid.Column="0" FontWeight="Bold" FontSize="20" Margin="5,5,5,5" Cursor="Hand" Background="LightGray" />
+
+    </Grid>
+
+</UserControl>

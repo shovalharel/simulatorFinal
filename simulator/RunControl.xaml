@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="simulator.RunControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:simulator"
+             mc:Ignorable="d" 
+             d:DesignHeight="42" d:DesignWidth="500" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+
+        </Grid.ColumnDefinitions >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+
+        <Button x:Name="Open_csv_file" Content="📂 CSV" Grid.Row="0" Grid.Column="0" Width="100" Click="Open_csv_Click" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,5,5,5" Cursor="Hand"  Background="LightGray">
+            <!--<Button.Background >
+                <ImageBrush/>
+            </Button.Background>-->
+        </Button>
+
+        <Button x:Name="Open_csv2_file" Content="📂 CSV Normal" Grid.Row="0" Grid.Column="1" Click="Open_csv2_file_click" FontWeight="Bold" FontSize="20" Margin="5,5,5,5" Cursor="Hand" Background="LightGray" >
+            <!--<Button.Background>
+                <ImageBrush/>
+            </Button.Background>-->
+        </Button>
+
+        <Button x:Name="Open_xml_file" Content="📂 XML" Grid.Row="0" Grid.Column="2" Width="100" Click="Open_xml_Click" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,5,5,5" Cursor="Hand"  Background="LightGray">
+            <!--<Button.Background>
+                <ImageBrush/>
+            </Button.Background>-->
+        </Button>
+        <Button x:Name="Start" Content="Start" Grid.Row="0" Grid.Column="3" Width="100" Click="Start_Click" FontWeight="Bold" FontSize="20"  Cursor="Hand" Margin="5,5,5,5"  Background="LightGray">
+            <!--<Button.Background>
+                <ImageBrush/>
+            </Button.Background>-->
+        </Button>
+        
+    </Grid>
+</UserControl>
