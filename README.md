@@ -1,8 +1,8 @@
 # simulatorFinal
 
-WPF Flight Gear Simulator App
-link to github –  צריך להכניס כאן קישור
-link to an explanatory video - https://youtu.be/c75q5-h0EP0
+WPF Flight Gear Simulator App  
+link to github –  צריך להכניס כאן קישור  
+link to an explanatory video - https://youtu.be/c75q5-h0EP0  
 # Summary:
 An Interpreter project for a FlightGear flight simulator. The program connects to the simulator and allows us to view flight data on a dedicated simulator and explore it.
 In this project we built an application that allows us to view flight data on a dedicated simulator and explore them. Our users are flight researchers or pilots who want to view data, sampled at a certain rate during any flight.
