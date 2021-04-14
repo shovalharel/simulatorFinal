@@ -1,0 +1,57 @@
+﻿<!--<UserControl x:Class="simulator.Graphs"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:oxy="http://oxyplot.org/wpf"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:simulator"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Margin="10,10,0,0">
+        <ListBox x:Name="Listbox_chunks_list" ItemsSource="{Binding VM_Chunks_list}" SelectedIndex="0" 
+                 HorizontalAlignment="Left" Height="92" Margin="51,115,0,0" VerticalAlignment="Top" 
+                 Width="156" SelectionChanged="Listbox_chunks_list_SelectionChanged">
+        </ListBox>
+        <oxy:Plot x:Name="chunk_select" Title="{Binding VM_Chunk_selected}" Margin="253,102,365,209"  FontSize="5">
+            <oxy:LineSeries ItemsSource="{Binding VM_Points}"/>
+        </oxy:Plot>
+        <oxy:Plot x:Name="max_pearson_chunk" Title="{Binding VM_Pearson_chunk}" Margin="500,115,102,182"  FontSize="5">
+            <oxy:LineSeries ItemsSource="{Binding VM_Pearson_points}"/>
+        </oxy:Plot>-
+    </Grid>
+</UserControl>-->
+<UserControl x:Class="simulator.Graphs"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:oxy="http://oxyplot.org/wpf"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:simulator"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Margin="0,0,0,-64">
+        <ListBox x:Name="Listbox_chunks_list" ItemsSource="{Binding VM_Chunks_list}" SelectedIndex="0" 
+                 HorizontalAlignment="Left" Height="92" Margin="37,10,0,0" VerticalAlignment="Top" 
+                 Width="156" SelectionChanged="Listbox_chunks_list_SelectionChanged">
+        </ListBox>
+        <oxy:Plot x:Name="chunk_select" Title="{Binding VM_Chunk_selected}" Margin="0,116,550,195"  FontSize="5">
+            <oxy:Plot.Series>
+                <oxy:LineSeries ItemsSource="{Binding VM_Points}"/>
+            </oxy:Plot.Series>
+        </oxy:Plot>
+        
+        <oxy:Plot x:Name="max_pearson" Title="{Binding VM_Pearson_chunk}" Margin="256,40,279,257"  FontSize="5">
+            <oxy:Plot.Series>
+                <oxy:LineSeries ItemsSource="{Binding VM_Pearson_points}"/>
+            </oxy:Plot.Series>
+        </oxy:Plot>
+        
+        <!--points-->
+        <oxy:Plot x:Name="max_pearson_chunk" Title="BANANA" Margin="538,40,0,257"  FontSize="5">
+            <oxy:Plot.Series>
+                <oxy:LineSeries ItemsSource="{Binding VM_Line_Points}"/>
+                <oxy:LineSeries ItemsSource="{Binding VM_Last_Points}" Color="Transparent" MarkerFill="Plum" MarkerType="Circle" MarkerSize="3"/>
+            </oxy:Plot.Series>
+        </oxy:Plot>
+    </Grid>
+</UserControl>

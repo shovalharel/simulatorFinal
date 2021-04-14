@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="simulator.DataFly"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:simulator"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Label Content="altimeter" HorizontalAlignment="Left" Margin="240,71,0,0" VerticalAlignment="Top" Width="70" FontSize="12"/>
+        <Label Content="{Binding VM_Altimeter, Mode=OneWay}" HorizontalAlignment="Left"  Margin="332,51,0,0" VerticalAlignment="Top" Height="33" Width="180"/>
+        <Label Content="airspeed" HorizontalAlignment="Left" Margin="240,110,0,0" VerticalAlignment="Top" Width="70" FontSize="12"/>
+        <Label Content="{Binding VM_Airspeed, Mode=OneWay}" HorizontalAlignment="Left"  Margin="332,100,0,0" VerticalAlignment="Top" Height="33" Width="180"/>
+        <Label Content="heading" HorizontalAlignment="Left" Margin="240,141,0,0" VerticalAlignment="Top" Width="70" FontSize="12"/>
+        <Label Content="{Binding VM_Heading, Mode=OneWay}" HorizontalAlignment="Left"  Margin="332,138,0,0" VerticalAlignment="Top" Height="33" Width="180"/>
+        <Label Content="pitch" HorizontalAlignment="Left" Margin="240,172,0,0" VerticalAlignment="Top" Width="70" FontSize="12"/>
+        <Label Content="{Binding VM_Pitch, Mode=OneWay}" HorizontalAlignment="Left"  Margin="332,168,0,0" VerticalAlignment="Top" Height="33" Width="180"/>
+        <Label Content="roll" HorizontalAlignment="Left" Margin="240,203,0,0" VerticalAlignment="Top" Width="70" FontSize="12"/>
+        <Label Content="{Binding VM_Roll, Mode=OneWay}" HorizontalAlignment="Left"  Margin="332,165,0,0" VerticalAlignment="Top" Height="33" Width="180"/>
+        <Label Content="yaw" HorizontalAlignment="Left" Margin="240,172,0,0" VerticalAlignment="Top" Width="70" FontSize="12"/>
+        <Label Content="{Binding VM_Yaw, Mode=OneWay}" HorizontalAlignment="Left"  Margin="332,168,0,0" VerticalAlignment="Top" Height="33" Width="180"/>
+    </Grid>
+</UserControl>
