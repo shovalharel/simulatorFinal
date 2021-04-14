@@ -1,0 +1,48 @@
+﻿<Window x:Name="main_window" x:Class="simulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:simulator"
+        xmlns:Py="clr-namespace:simulator"
+        xmlns:Js="clr-namespace:simulator"
+        xmlns:Gr="clr-namespace:simulator"
+        xmlns:Df="clr-namespace:simulator"
+        xmlns:Rc="clr-namespace:simulator"
+        mc:Ignorable="d" Background="White"
+        Title="Simulator" Height="550" Width="850" >
+
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Shova\source\repos\simulator\simulator\planePic.png" Opacity="0.7"/>
+        </Grid.Background>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="2.5*"/>
+            <RowDefinition Height="2.5*"/>
+            <RowDefinition Height="78"/>
+        </Grid.RowDefinitions>
+        <Rc:RunControl x:Name="runControl" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6"  VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+        <Js:Joystick x:Name="joystick" Grid.Column="6" Grid.Row="0" Grid.ColumnSpan="3"  Grid.RowSpan="2" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Df:DataFly x:Name="dataFly" Grid.Column="6"  Grid.Row="2" Grid.ColumnSpan="3"  Grid.RowSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center" Height="auto" Width="auto" Margin="0,0,0,10"/>
+        <Gr:Graphs x:Name="graphs" Grid.Column="0"  Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="7"  Height="352" Width="auto" VerticalAlignment="Top" Margin="5,10,79.333,0" />
+        <Py:Player x:Name="player" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="9" Margin="60,0,60,0" />
+    </Grid>
+</Window>
+    
+    
