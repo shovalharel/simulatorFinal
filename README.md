@@ -2,7 +2,7 @@
 
 WPF Flight Gear Simulator App  
 
-link to github –  צריך להכניס כאן קישור
+link to github –  https://github.com/shovalharel/simulatorFinal
 
 link to an explanatory video - https://youtu.be/c75q5-h0EP0  
 
